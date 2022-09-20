@@ -1,0 +1,304 @@
+:root {
+  --primary: hsla(210deg, 50%, 40%, 1);
+  --primary-active: hsla(210deg, 50%, 40%, 0.8);
+  --primary-dark: hsla(210deg, 40%, 30%, 1);
+  --gray: hsla(210deg, 7%, 46%, 1);
+  --gray-100: hsla(210deg, 17%, 98%, 1);
+  --gray-200: hsla(210deg, 16%, 93%, 1);
+  --gray-300: hsla(210deg, 14%, 89%, 1);
+  --gray-400: hsla(210deg, 14%, 83%, 1);
+  --gray-500: hsla(210deg, 11%, 71%, 1);
+  --gray-600: hsla(208deg, 7%, 46%, 1);
+  --gray-700: hsla(210deg, 9%, 31%, 1);
+  --gray-800: hsla(210deg, 10%, 23%, 1);
+  --gray-900: hsla(210deg, 11%, 15%, 1);
+  --black: hsla(210deg, 0%, 18%, 1);
+  --white: #FEFEFE;
+  --bright: #FFF;
+  --danger: hsla(0deg, 90%, 60%, 1);
+  --border: 1px solid rgba(0, 0, 0, 0.2);
+  --border-dark: 2px solid rgba(0, 0, 0, 1);
+  --shadow: 0px 0px 1rem rgba(0,0,0,0.2);
+  --overlay: rgba(0, 0, 0, 0.5);
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+p, .small { font-size: 12px; }
+.big-body {
+  width: 100%;
+  max-width: 960px;
+  background-color: var(--white);
+  margin: auto;
+}
+.form-control {
+  border: var(--border-dark);
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+  flex: 1;
+}
+.btn {
+  padding: .5rem 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.form-control:focus {
+  background-color: var(--white);
+}
+.btn:focus,
+.btn:hover {
+  background-color: var(--primary-active);
+}
+.flex { display: flex; }
+li.no { list-style-type: none; }
+.gap-3 {
+  grid-gap: .75rem;
+}
+
+/* ================================================== */
+/* Modal */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 300ms ease-in-out;
+  z-index: 10;
+}
+.overlay .close {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: none;
+  background: var(--overlay);
+}
+.modal-container {
+  margin: 5rem auto;
+  padding: 1rem;
+  background: var(--bright);
+  border: var(--border-dark);
+  width: 100%;
+  max-width: 480px;
+  border-radius: .25rem;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.modal-header {
+  margin-bottom: 1rem;
+}
+.modal-body {
+  grid-gap: .25rem;
+}
+.modal-body form {
+  flex-direction: column;
+  grid-gap: .25rem;
+}
+.modal-body .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: .25rem;
+}
+.modal-footer {}
+.modal-description-area {
+  border: var(--border-dark);
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+  width: 100%;
+  resize: vertical;
+  height: 96px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.btn-yep {
+  border: var(--border-dark);
+  border-radius: .25rem;
+}
+.btn-nah {
+  padding: .5rem 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: .25rem;
+  border: var(--border-dark);
+}
+.btn-nah:focus,
+.btn-nah:hover {
+  background-color: rgba(220, 220, 220, 0.8);
+}
+.hidden { display: none; }
+.active { display: block!important; }
+
+/* ================================================== */
+/* Left */
+.left, .right {
+  width: 100%;
+  max-width: 768px;
+  border: var(--border-dark);
+  position: relative;
+}
+.left-header {
+  height: 50px;
+  border-bottom: var(--border-dark);
+  background-color: var(--gray-100);
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+.left-body {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+ul.task-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 1rem;
+  grid-gap: .5rem;
+}
+li.task-item {
+  padding: .5rem 1rem;
+  align-items: center;
+  grid-gap: .25rem;
+  border: var(--border-dark);
+  border-radius: .25rem;
+  background-color: var(--bright);
+  justify-content: space-between;
+  font-size: 12px;
+  box-shadow: 2px 4px var(--black);
+}
+li.task-item:hover {
+  background-color: var(--gray-200);
+  cursor: pointer;
+}
+li.task-item:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px var(--black);
+  background-color: var(--gray-300);
+}
+.left-footer {
+  border-top: var(--border-dark);
+  width: 100%;
+  padding: .5rem 1rem;
+  position: absolute;
+  bottom: 0;
+  justify-content: space-between;
+}
+.left-footer .mark-all {
+  grid-gap: .75rem;
+}
+.left-footer,
+.right-footer {
+}
+
+.btn-add {
+  border: none;
+  border-left: var(--border-dark);
+  height: 50px;
+  width: 50px;
+  outline: none;
+}
+.btn-add:focus{
+}
+
+/* ================================================== */
+/* Right */
+.right-header {
+  height: 50px;
+  background-color: var(--gray-100);
+  border-bottom: var(--border-dark);
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-body {
+  margin-bottom: 4rem;
+}
+
+/* ================================================== */
+/* Description */
+.description-area {
+  width: 100%;
+  height: 96px;
+  resize: vertical;
+  padding: .5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  border-bottom: var(--border-dark);
+  font-size: 12px;
+}
+.description-area:focus,
+.comments-area:focus {
+  outline: 2px solid var(--black);
+}
+
+/* ================================================== */
+/* Comments */
+ul.comments-list {
+  padding: .5rem 1rem;
+  grid-gap: .5rem;
+  flex-direction: column;
+}
+li.comments-item {
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  border: var(--border-dark);
+}
+.comments-area {
+  font-size: 12px;
+  width: 100%;
+  padding: .5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  outline: none;
+  border-top: var(--border-dark);
+  position: absolute;
+  bottom: 0;
+}
+.comments-wrap {
+
+}
+.btn-comment {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+li > span.push-right {
+  float: right;
+
+}
+
+/* ================================================== */
+/* Media */
+@media all and (max-width: 707px) {
+  .big-body {
+    flex-direction: column;
+  }
+}
+
+/* ================================================== */
+/* Keyframes */
