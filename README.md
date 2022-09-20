@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# mighty-meave
+A daily reminder, task-list, to-do list, you name it. This one was being developed using React, and only React, and also this was my very first time using this kinda language to communicate. Lmao, I find it difficult to take care the thousands of hundrends hooks that React provides. Be hydrated, adeniums!
+>>>>>>> 1c39afe54d32123ac805383ae9538faffade9de0
